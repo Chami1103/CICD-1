@@ -16,10 +16,10 @@ const server = http.createServer((req, res) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Bitcoin Information</title>
       <style>
-        body { font-family: Arial, sans-serif; background-color: #000; text-align: center; padding: 50px; color: #FFF; }
+        body { font-family: Arial, sans-serif; background-color: #fff; text-align: center; padding: 50px; color: #000; }
         h1 { color: #f7931a; font-size: 2.5em; }
-        h2 { font-size: 1.8em; color: #aaa; }
-        p, ul { font-size: 1.2em; line-height: 1.6; color: #ccc; text-align: left; max-width: 800px; margin: 0 auto; }
+        h2 { font-size: 1.8em; color: #333; }
+        p, ul { font-size: 1.2em; line-height: 1.6; color: #555; text-align: left; max-width: 800px; margin: 0 auto; }
         .price { font-size: 2.5em; color: #2d8659; margin: 20px 0; }
         .logo { width: 100px; }
         .content { max-width: 800px; margin: auto; }
@@ -101,3 +101,4 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}/`);
 });
+k
