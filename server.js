@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
 
-  // Simple HTML page displaying Bitcoin information
+  // Updated HTML with modern styling
   const html = `
     <!DOCTYPE html>
     <html lang="en">
@@ -16,18 +16,60 @@ const server = http.createServer((req, res) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Bitcoin Information</title>
       <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; padding: 50px; color: #333; }
-        h1 { color: #3c6e71; font-size: 2.5em; }
-        h2 { font-size: 1.8em; color: #555; }
-        p { font-size: 1.2em; line-height: 1.6; color: #666; }
-        .price { font-size: 2.5em; color: #2d8659; margin: 20px 0; }
-        .logo { width: 100px; }
-        .content { max-width: 800px; margin: auto; }
-        .footer { font-size: 0.9em; color: #999; margin-top: 40px; }
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #121212;
+          color: #FFFFFF;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+        .container {
+          text-align: center;
+          max-width: 800px;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+          background-color: #1E1E1E;
+        }
+        h1 {
+          font-size: 3em;
+          color: #F7931A;
+          margin-bottom: 10px;
+        }
+        .price {
+          font-size: 2em;
+          color: #4CAF50;
+          margin: 20px 0;
+        }
+        .logo {
+          width: 80px;
+          margin-bottom: 20px;
+        }
+        h2 {
+          font-size: 1.8em;
+          color: #e0e0e0;
+        }
+        p {
+          font-size: 1.2em;
+          color: #b0b0b0;
+          line-height: 1.6;
+        }
+        .footer {
+          font-size: 0.9em;
+          color: #888888;
+          margin-top: 40px;
+        }
+        .content {
+          padding: 20px;
+        }
       </style>
     </head>
     <body>
-      <div class="content">
+      <div class="container">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" alt="Bitcoin Logo" class="logo">
         <h1>Bitcoin Information</h1>
         
@@ -42,10 +84,11 @@ const server = http.createServer((req, res) => {
         
         <p>Bitcoin’s limited supply of 21 million coins makes it a potentially valuable store of value, and it is increasingly accepted by businesses and institutions around the world.</p>
         
-        <p>Many people view Bitcoin as a technological breakthrough, potentially enabling financial inclusion and innovation beyond the traditional banking system.</p>
-      </div>
-      <div class="footer">
-        <p>Note: The Bitcoin price is static. Connect with a real-time API for live updates.</p>
+        <p>Many view Bitcoin as a revolutionary technology, potentially enabling financial inclusion and innovation beyond traditional banking systems.</p>
+        
+        <div class="footer">
+          <p>Note: The Bitcoin price is static. Connect with a real-time API for live updates.</p>
+        </div>
       </div>
     </body>
     </html>
